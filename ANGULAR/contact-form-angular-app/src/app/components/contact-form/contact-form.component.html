@@ -1,0 +1,31 @@
+<form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" class="form-control" required [(ngModel)]="contactFormModel.name" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" class="form-control" required [(ngModel)]="contactFormModel.phone" name="phone">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" class="form-control" required [(ngModel)]="contactFormModel.email" name="email">
+  </div>
+
+  <div class="form-group">
+    <label for="departments">Departments</label>
+    <select id="departments" class="form-control" required [(ngModel)]="contactFormModel.departments" name="departments">
+      <option value="" disabled selected>Select a department</option>
+      <option *ngFor="let department of departments" [value]="department">{{ department }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea id="description" class="form-control" required [(ngModel)]="contactFormModel.description" name="description"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

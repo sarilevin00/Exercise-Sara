@@ -1,0 +1,31 @@
+/* Styles for the Monthly Report component */
+.monthly-report {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .monthly-report {
+        padding: 10px;
+    }
+
+    .table th, .table td {
+        font-size: 14px;
+    }
+}
